@@ -11,18 +11,17 @@
 <body>
 <header th:replace="~{blocks/header :: header}"></header>
 <div class="container mt-5 mb-5">
-    <h1 th:text="${user.username}"/>
+    <h1 th:text="${user.username}"></h1>
     <div th:each="el : ${user}">
         <form method="post">
             <h4>Username:</h4><input type="text" th:value="${el.username}" name="username"
                                      placeholder="Введіть назву статті" class="form-control"><br>
             <h4>Email:</h4><input type="text" th:value="${el.email}" name="email" placeholder="Введіть анонс статті"
                                   class="form-control"><br>
-            <h4>First Name:</h4><input type="text" th:value="${el.firstName}" name="first_name"
+            <h4>First Name:</h4><input type="text" th:value="${el.firstName}" name="firstName"
                                        placeholder="Введіть анонс статті" class="form-control"><br>
-            <h4>Last Name:</h4><input type="text" th:value="${el.lastName}" name="last_name"
+            <h4>Last Name:</h4><input type="text" th:value="${el.lastName}" name="lastName"
                                       placeholder="Введіть анонс статті" class="form-control"><br>
-            <!--      <textarea name="full_text" placeholder="Введіть основний текст статті" class="form-control" th:text="${el.fullText}"></textarea><br>-->
             <button type="submit" class="btn btn-success">Update user</button>
         </form>
     </div>

@@ -18,10 +18,6 @@
         <p th:text="'Email: ' + ${el.email}"/>
         <p th:text="'First name: ' + ${el.firstName}"/>
         <p th:text="'Last name: ' + ${el.lastName}"/>
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <a th:href="'/api/v1/user/' + ${el.id} + '/edit'" class="btn btn-secondary">Edit</a>
-            <a href="/logout" class="btn btn-secondary">Logout</a>
-        </div>
         <form action="/api/v1/user/follow" method="post">
             <input type="hidden" name="id_observer" th:value="${observer.id}">
             <input type="hidden" name="id" th:value="${user.id}">

@@ -127,5 +127,21 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="1.0.7" author="dmytro.stepanenko">
+        <addForeignKeyConstraint baseColumnNames="distributor_id"
+                                 baseTableName="user_followers"
+                                 constraintName="fk_user_followers_distributor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
+    <changeSet id="1.0.8" author="dmytro.stepanenko">
+        <addForeignKeyConstraint baseColumnNames="subscriber_id"
+                                 baseTableName="user_followers"
+                                 constraintName="fk_user_followers_subscriber_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="users"/>
+    </changeSet>
+
 
 </databaseChangeLog>

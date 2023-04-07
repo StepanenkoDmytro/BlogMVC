@@ -7,16 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MyBlogMVC" />
         <module name="SuperApp" />
-        <module name="SuperAppHome" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="JustInterviewProject" target="1.8" />
+      <module name="SuperAppHome" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MyBlogMVC" options="-parameters" />
       <module name="SuperApp" options="-parameters" />
       <module name="SuperAppHome" options="-parameters" />
     </option>
